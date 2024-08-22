@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Seminar Registration Form</title>
+
+</head>
+<body>
+    <h2>Seminar Registration Form</h2> 
+    <form action="#" method="post"></form>
+    <label for="FullName">Full Name:</label><br>
+    <input type="text" id="FullName" name="FullName" required><br><br>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+<!-- Gender -->
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>><br>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label>><br>
+    <input type="radio" id="other" name="gender" value="other" required>
+    <label for="other">Other</label>><br><br>
+
+<!-- email -->
+     <label for="email">Email Adress:</label><br>
+     <input type="email" id="email" name="email" placeholder="name@gmail.com" required><br><br>
+<!-- password -->
+     <label for="password">Password:</label><br>
+     <input type="password" id="password" name="password"  required><br><br>
+<!-- phone number -->
+     <label for="phone">Phone Number:</label><br>
+     <input type="tel" id="phone" name="phone"  required><br><br>
+<!-- timing -->
+     <label for="seminarTime">Preferred Seminar Time:</label><br>
+     <input type="time" id="time" name="time" required><br><br>
+<!-- meal -->
+
+     <label for="meal">Meal Preferences:</label><br>
+     <select id="meal" name="meal"  required>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="Non-vegetarian">Non-vegetarian></option>
+        <option value="vegan">Vegan></option>
+     </select><br><br>
+<!-- submit button -->
+     <input type="submit" value="Register">
+    </form>
+
+   
+</body>
+</html>
