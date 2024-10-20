@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Seminar Registration Form</title>
+
+</head>
+<body>
+    <h2>Seminar Registration Form</h2> 
+	
+    <label for="FullName">Full Name:</label><br>
+    <input type="text" id="FullName" name="FullName" required="" fdprocessedid="ds6vhic"><br><br>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required=""><br><br>
+
+
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male" required="">
+    <label for="male">Male</label>&gt;<br>
+    <input type="radio" id="female" name="gender" value="female" required="">
+    <label for="female">Female</label>&gt;<br>
+    <input type="radio" id="other" name="gender" value="other" required="">
+    <label for="other">Other</label>&gt;<br><br>
+
+
+     <label for="email">Email Adress:</label><br>
+     <input type="email" id="email" name="email" required="" fdprocessedid="w9dekb"><br><br>
+
+     <label for="password">Password:</label><br>
+     <input type="password" id="password" name="password" required="" fdprocessedid="4r66hh"><br><br>
+
+     <label for="phone">Phone Number:</label><br>
+     <input type="tel" id="phone" name="phone" required="" fdprocessedid="iza60n"><br><br>
+
+     <label for="seminarTime">Preferred Seminar Time:</label><br>
+     <select id="seminarTime" name="seminarTime" required="" fdprocessedid="wrie2o">
+        <option value="Morning">Morning</option>
+        <option value="Afternoon">Afternoon</option>
+     </select><br><br>
+
+
+     <label for="meal">Meal Preferences:</label><br>
+     <select id="meal" name="meal" required="" fdprocessedid="fnx5mg">
+        <option value="vegetarian">Vegetarian</option>
+        <option value="Non-vegetarian">Non-vegetarian&gt;</option>
+        <option value="vegan">Vegan&gt;</option>
+     </select><br><br>
+
+     <input type="submit" value="Register" fdprocessedid="hmbrrxz">
+    
+
+   
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
