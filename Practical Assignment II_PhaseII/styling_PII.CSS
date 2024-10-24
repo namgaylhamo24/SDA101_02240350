@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1e1e2d;
+    color: white;
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #1e1e2d;
+    padding: 10px 0;
+    text-align: left;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7);
+}
+
+/* Social Media Icons */
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white; /* Icon color */
+    font-size: 24px; /* Icon size */
+}
+
+.social-icons a:hover {
+    color: #00ffff; /* Hover color */
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #2e2e3e;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-image img {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7);
+}
+
+#about p {
+    max-width: 50%;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adds space between service items */
+    padding: 10px; /* Adds space inside the container */
+}
+
+.service-card {
+    background-color: #2e2e3e;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project img {
+    width: 300px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e2d;
+}
