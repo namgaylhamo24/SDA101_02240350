@@ -9,9 +9,11 @@ body {
 }
 
 a {
-    color: #00ffff;
+    color: white;
     text-decoration: none;
+    
 }
+
 
 /* Header Styles */
 header {
@@ -25,11 +27,17 @@ nav ul {
     display: flex;
     justify-content: right;
     gap: 20px;
+    
 }
 
 nav ul li {
     display: inline-block;
 }
+
+nav ul li a:hover {
+    color: #00ffff;
+}
+
 
 /* Hero Section */
 .hero {
@@ -63,12 +71,15 @@ nav ul li {
 .social-icons a {
     margin: 0 10px;
     text-decoration: none;
-    color: white; /* Icon color */
-    font-size: 24px; /* Icon size */
+    color: white; 
+    font-size: 24px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .social-icons a:hover {
-    color: #00ffff; /* Hover color */
+    color: #00ffff; 
 }
 
 /* About Section */
@@ -101,8 +112,8 @@ nav ul li {
 .services-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Adds space between service items */
-    padding: 10px; /* Adds space inside the container */
+    gap: 10px;
+    padding: 10px; 
 }
 
 .service-card {
@@ -130,6 +141,7 @@ nav ul li {
 /* Contact Section */
 #contact {
     padding: 50px 20px;
+    
 }
 
 .contact-form {
@@ -138,6 +150,8 @@ nav ul li {
     gap: 10px;
     max-width: 400px;
     margin: 0 auto;
+    color: #2e2e3e;
+
 }
 
 .contact-form input, 
@@ -151,7 +165,7 @@ nav ul li {
 .contact-form button {
     padding: 10px;
     background-color: #00ffff;
-    color: #000;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;

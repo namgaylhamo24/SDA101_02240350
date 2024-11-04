@@ -1,4 +1,4 @@
-Create an HTML page with the following components:
+## Create an HTML page with the following components:
 
 An unordered list of your courses for the semester.
 An ordered list of your daily class schedule (Monday to Friday).

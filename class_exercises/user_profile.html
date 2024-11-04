@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <style>
+    /* Global styling for the custom element container */
+    user-profile {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Example usage of the custom user-profile element -->
+<user-profile name="Namgay Lhamo" role="Software Engineering Student"></user-profile>
+
+<script>
+  // Define the UserProfile custom element
+  class UserProfile extends HTMLElement {
+    constructor() {
+      super();
+      // Attach shadow DOM to encapsulate styles
+      this.attachShadow({ mode: 'open' });
+
+      // Define the template with styles and structure
+      const template = document.createElement('template');
+      template.innerHTML = `
+        <style>
+          /* Styling for the card */
+          .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+          }
+          /* Styling for the name */
+          .name {
+            font-size: 1.2em;
+            font-weight: bold;
+          }
+          /* Styling for the role */
+          .role {
+            color: #555;
+          }
+        </style>
+        <div class="card">
+          <div class="name"></div>
+          <div class="role"></div>
+        </div>
+      `;
+
+      // Attach the template content to the shadow DOM
+      this.shadowRoot.append(template.content.cloneNode(true));
+      // Display the attribute values in the card
+      this.updateAttributes();
+    }
+
+    // Specify the observed attributes
+    static get observedAttributes() {
+      return ['name', 'role'];
+    }
+
+    // Callback when attribute changes
+    attributeChangedCallback() {
+      this.updateAttributes();
+    }
+
+    // Method to update displayed attribute values
+    updateAttributes() {
+      this.shadowRoot.querySelector('.name').textContent = this.getAttribute('name') || 'Unknown';
+      this.shadowRoot.querySelector('.role').textContent = this.getAttribute('role') || 'Role not specified';
+    }
+  }
+
+  // Define the custom element
+  customElements.define('user-profile', UserProfile);
+</script>
+
+</body>
+</html>

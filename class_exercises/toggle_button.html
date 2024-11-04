@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Button</title>
+  <script src="toggle_button.js"></script>
+</head>
+<body>
+
+<toggle-button></toggle-button>
+
+<script>
+  class ToggleButton extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: 'open' });
+      this.isOn = localStorage.getItem('toggleState') === 'true';
+
+      this.button = document.createElement('button');
+      this.updateButton();
+      this.shadowRoot.append(this.button);
+
+      this.button.addEventListener('click', () => {
+        this.toggle();
+        this.dispatchEvent(new CustomEvent('toggle-changed', { detail: { isOn: this.isOn } }));
+      });
+    }
+
+    toggle() {
+      this.isOn = !this.isOn;
+      localStorage.setItem('toggleState', this.isOn);
+      this.updateButton();
+    }
+
+    updateButton() {
+      this.button.textContent = this.isOn ? 'ON' : 'OFF';
+      this.button.style.backgroundColor = this.isOn ? 'green' : 'red';
+    }
+  }
+
+  customElements.define('toggle-button', ToggleButton);
+</script>
+
+</body>
+</html>
