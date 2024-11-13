@@ -14,4 +14,4 @@ Your card component should:
 
 * Allow for different types of content (text, images, other HTML elements)
 
-* Maintain consistent styling while being visually customizable
+* Maintain consistent styling while being visually customizable.
